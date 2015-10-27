@@ -1,0 +1,98 @@
+.content {
+    .locations {
+        @include vertpadding(90px);
+        .heading {
+            .title {
+                @include mptitle;
+            }
+        }
+        .location_item {
+            margin-bottom: 30px;
+            padding: 3px;
+            box-shadow: 0 1px 1px 1px rgba(236, 236, 236, 0.9);
+            position: relative;
+            a {
+                .location_image {
+                    overflow: hidden;
+                    position: relative;
+                    &:after {
+                        background: rgba(36, 39, 35, 0.32);
+                        top: 0;
+                        left: 0;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                        content: '';
+                        -webkit-transition: all 1.2s ease-in-out;
+                        -moz-transition: all 1.2s ease-in-out;
+                        -o-transition: all 1.2s ease-in-out;
+                        transition: all 1.2s ease-in-out;
+                    }
+                    img {
+                        width: 100%;
+                        -webkit-transition: all 1.2s ease-in-out;
+                        -moz-transition: all 1.2s ease-in-out;
+                        -o-transition: all 1.2s ease-in-out;
+                        transition: all 1.2s ease-in-out;
+                    }
+                }
+                &:hover {
+                    .location_image {
+                        &:after {
+                            background: rgba(36, 39, 35, 0.02);
+                        }
+                        img {
+                            -moz-transform: scale(1.2, 1.2);
+                            -ms-transform: scale(1.2, 1.2);
+                            -webkit-transform: scale(1.2, 1.2);
+                            -o-transform: scale(1.2, 1.2);
+                            transform: scale(1.2, 1.2);
+                        }
+                    }
+                }
+                .location_descr {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                    text-align: center;
+                    padding-top: 25%;
+                    .name {
+                        font-size: 32px;
+                        line-height: 36px;
+                        opacity: 1;
+                    }
+                    p {
+                        font-size: 12px;
+                        color: #fff;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+        .more {
+            margin-top: 40px;
+            text-align: center;
+            a {
+                @include greenbutton;
+                font-size: 16px;
+                padding: 10px 40px;
+                border-radius: 4px;
+            }
+        }
+    }
+    .howitworks {
+        @include vertpadding(90px);
+        background: #f8f8f8;
+        border-bottom: 1px solid #eeeeee;
+        border-top: 1px solid #eeeeee;
+        .heading {
+            .title {
+                @include mptitle;
+            }
+        }
+    }
+}

@@ -7,9 +7,14 @@
     <title>Index</title>
 	<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/chosen.css" rel="stylesheet">
+	<link href="css/jquery.timepicker.min.css" rel="stylesheet">
 	
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/chosen.jquery.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body>
@@ -60,22 +65,28 @@
 						<p class="title">Best London venue finder</p>
 						<p>Find and Book 1000+ places in London</p>
 					</div>
-					<div class="search col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+					<div class="search col-sm-12 col-sm-offset-0 col-xs-10 col-xs-offset-1">
 						<div class="row">
-							<div class="col-sm-2 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+							<div class="col-sm-2 col-sm-offset-1 col-xs-10 col-xs-offset-1 venue">
 								<input type="text" name="venue" placeholder="Venue">
 							</div>
-							<div class="col-sm-2 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-								<input type="text" name="persons" placeholder="Persons">
+							<div class="col-sm-2 col-sm-offset-0 col-xs-10 col-xs-offset-1 person">
+								<select data-placeholder="Persons">
+									<option data-vl=""></option>
+									<option data-vl="">1 person</option>
+									<option data-vl="">2 persons</option>
+									<option data-vl="">3 persons</option>
+									<option data-vl="">4 persons</option>
+								</select>
 							</div>
-							<div class="col-sm-2 col-sm-offset-0 col-xs-10 col-xs-offset-1">
-								<input type="text" name="date" placeholder="Date">
+							<div class="col-sm-2 col-sm-offset-0 col-xs-10 col-xs-offset-1 date">
+								<input type="text" name="date" id="date" placeholder="Date">
 							</div>
 							<div class="col-sm-2 col-sm-offset-0 col-xs-10 col-xs-offset-1 time">
-								<input type="text" name="from" placeholder="From">
-								<input type="text" name="to" placeholder="To">
+								<input id="from" type="text" name="from" placeholder="From">
+								<input id="to" type="text" name="to" placeholder="To">
 							</div>
-							<div class="col-sm-2 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+							<div class="col-sm-2 col-sm-offset-0 col-xs-10 col-xs-offset-1 searching">
 								<a href="" class="search_button">Search</a>
 							</div>
 						</div>
@@ -86,6 +97,132 @@
 	  </header>
 	  
 		<div class="content">
+			<div class="locations">
+				<div class="container">
+					<div class="heading">
+						<p class="title">Top locations</p>
+					</div>
+					<div class="row">
+						<div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+							<div class="location_item">
+								<a href="">
+									<div class="location_image">
+										<img src="images/location-1.jpg"/>
+									</div>
+									<div class="location_descr">
+										<p class="name">Warsaw</p>
+										<p>+1200 rooms</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+							<div class="location_item">
+								<a href="">
+									<div class="location_image">
+										<img src="images/location-2.jpg"/>
+									</div>
+									<div class="location_descr">
+										<p class="name">Berlin</p>
+										<p>+1200 rooms</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+							<div class="location_item">
+								<a href="">
+									<div class="location_image">
+										<img src="images/location-3.jpg"/>
+									</div>
+									<div class="location_descr">
+										<p class="name">London</p>
+										<p>+1200 rooms</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+							<div class="location_item">
+								<a href="">
+									<div class="location_image">
+										<img src="images/location-4.jpg"/>
+									</div>
+									<div class="location_descr">
+										<p class="name">New York</p>
+										<p>+1200 rooms</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+							<div class="location_item">
+								<a href="">
+									<div class="location_image">
+										<img src="images/location-5.jpg"/>
+									</div>
+									<div class="location_descr">
+										<p class="name">Seattle</p>
+										<p>+1200 rooms</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+							<div class="location_item">
+								<a href="">
+									<div class="location_image">
+										<img src="images/location-6.jpg"/>
+									</div>
+									<div class="location_descr">
+										<p class="name">Stockholm</p>
+										<p>+1200 rooms</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+							<div class="location_item">
+								<a href="">
+									<div class="location_image">
+										<img src="images/location-7.jpg"/>
+									</div>
+									<div class="location_descr">
+										<p class="name">Oslo</p>
+										<p>+1200 rooms</p>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+							<div class="location_item">
+								<a href="">
+									<div class="location_image">
+										<img src="images/location-8.jpg"/>
+									</div>
+									<div class="location_descr">
+										<p class="name">Paris</p>
+										<p>+1200 rooms</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="more">
+						<a href="">See more</a>
+					</div>
+				</div>
+			</div>
+			<div class="howitworks">
+				<div class="container">
+					<div class="heading">
+						<p class="title">How it works</p>
+					</div>
+					<div class="row">
+						
+					</div>
+				</div>
+			</div>
 		</div>
 	  
 	  <footer>
