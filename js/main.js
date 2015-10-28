@@ -20,4 +20,19 @@ $(document).ready(function(){
 		  document.head.appendChild(script);*/
 		  
 		  $("select").chosen({disable_search_threshold: 50, inherit_select_classes:true});
+		  
+		    $('.review_slider .bxslider').bxSlider({
+				slideWidth: 670,			//ширина слайда
+				slideMargin: 0,     //расстояние между слайдами
+				speed: 500,         //ну понятно
+				pager: true, 
+				controls: true,
+				randomStart: false,
+				preloadImages: 'all',
+				adaptiveHeight:true,
+				responsive:true,
+				nextText:'',
+				prevText:'',
+				onSliderLoad: function(currentIndex){}
+				});
 	  });

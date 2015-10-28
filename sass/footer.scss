@@ -1,0 +1,48 @@
+@mixin footertext {
+	& {
+	font-size:12px; color:#fff; opacity:0.8;
+	}
+}
+
+@mixin vertpadding($pad) {
+    & {
+        padding-top: $pad;
+        padding-bottom: $pad;
+    }
+}
+
+
+	footer {
+		@include vertpadding(60px);
+		background:#242723;
+		.copyright {
+			a {margin-bottom:6px; display:inline-block;}
+			p {
+				@include footertext;
+			}
+		}
+		.footer_menu {
+			.section_title {
+				@include footertext;
+				text-transform:uppercase;
+				margin-bottom:20px;
+			}
+			ul {
+				li {
+					margin-bottom:16px;
+					a {
+						color:#fff; 
+						text-decoration:none;
+						font-size:14px;
+						&:hover {text-decoration:underline;}
+					}
+				}
+			}
+		}
+	}
+
+@media only screen and (max-width: 768px) {
+	footer {
+		.copyright {text-align:center; margin-bottom:60px;}
+	}
+}

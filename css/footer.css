@@ -1,0 +1,53 @@
+/* line 15, ../sass/footer.scss */
+footer {
+  background: #242723;
+}
+/* line 8, ../sass/footer.scss */
+footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+/* line 19, ../sass/footer.scss */
+footer .copyright a {
+  margin-bottom: 6px;
+  display: inline-block;
+}
+/* line 2, ../sass/footer.scss */
+footer .copyright p {
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.8;
+}
+/* line 25, ../sass/footer.scss */
+footer .footer_menu .section_title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+/* line 2, ../sass/footer.scss */
+footer .footer_menu .section_title {
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.8;
+}
+/* line 31, ../sass/footer.scss */
+footer .footer_menu ul li {
+  margin-bottom: 16px;
+}
+/* line 33, ../sass/footer.scss */
+footer .footer_menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+/* line 37, ../sass/footer.scss */
+footer .footer_menu ul li a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 46, ../sass/footer.scss */
+  footer .copyright {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}

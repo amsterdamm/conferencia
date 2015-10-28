@@ -30,8 +30,8 @@
 html, body {
   height: 100%;
   font-family: 'montserrat-regular';
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 145%;
 }
 
 /* line 56, ../sass/default.scss */
@@ -79,48 +79,56 @@ input {
 }
 
 /* line 63, ../sass/default.scss */
+select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  background: white url("../images/chosen-drop.png") no-repeat scroll 95% 16px;
+}
+
+/* line 64, ../sass/default.scss */
 header:after {
   clear: both;
   content: "";
   display: block;
 }
 
-/* line 65, ../sass/default.scss */
+/* line 66, ../sass/default.scss */
 .container, .container-fluid, header .main-menu {
   padding: 0;
 }
 
-/* line 66, ../sass/default.scss */
+/* line 67, ../sass/default.scss */
 header .navbar-header, .main-menu, .main-menu ul, .submenu ul, .navbar.navbar-default {
   margin: 0 !important;
 }
 
-/* line 67, ../sass/default.scss */
+/* line 68, ../sass/default.scss */
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/* line 68, ../sass/default.scss */
+/* line 69, ../sass/default.scss */
 .row {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 69, ../sass/default.scss */
+/* line 70, ../sass/default.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #a8a8a9 !important;
   background: none;
 }
 
-/* line 70, ../sass/default.scss */
+/* line 71, ../sass/default.scss */
 ul, ol {
   padding: 0;
   margin: 0;
 }
 
 @media (min-width: 1170px) {
-  /* line 73, ../sass/default.scss */
+  /* line 74, ../sass/default.scss */
   .container {
     width: 1170px;
   }
@@ -308,6 +316,69 @@ ul, ol {
   text-decoration: underline;
 }
 
+/* line 148, ../sass/widgets.scss */
+.bx-wrapper .bx-pager {
+  height: 16px;
+  margin: 10px 0 0;
+  width: 100%;
+  text-align: center;
+}
+/* line 153, ../sass/widgets.scss */
+.bx-wrapper .bx-pager .bx-pager-item {
+  display: inline-block;
+  margin: 0 5px;
+}
+/* line 156, ../sass/widgets.scss */
+.bx-wrapper .bx-pager .bx-pager-item a {
+  background: #c6c6c6 none repeat scroll 0 0;
+  border-radius: 50%;
+  display: block;
+  font-size: 0;
+  height: 8px;
+  text-indent: -10000px !important;
+  outline: none;
+  width: 8px;
+}
+/* line 165, ../sass/widgets.scss */
+.bx-wrapper .bx-pager .bx-pager-item a.active {
+  background: #3fb436;
+}
+/* line 172, ../sass/widgets.scss */
+.bx-wrapper .bx-controls-direction a {
+  width: 20px;
+  height: 36px;
+  top: 50%;
+  margin-top: -18px;
+  position: absolute;
+  outline: none;
+}
+/* line 180, ../sass/widgets.scss */
+.bx-wrapper .bx-controls-direction .bx-prev {
+  background: url("../images/arrow-prev.png") no-repeat scroll 0 0;
+  left: -5%;
+}
+/* line 183, ../sass/widgets.scss */
+.bx-wrapper .bx-controls-direction .bx-prev:hover {
+  background: url("../images/arrow-prev-hover.png") no-repeat scroll 0 0;
+}
+/* line 185, ../sass/widgets.scss */
+.bx-wrapper .bx-controls-direction .bx-next {
+  background: url("../images/arrow-next.png") no-repeat scroll 0 0;
+  right: -5%;
+}
+/* line 188, ../sass/widgets.scss */
+.bx-wrapper .bx-controls-direction .bx-next:hover {
+  background: url("../images/arrow-next-hover.png") no-repeat scroll 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 194, ../sass/widgets.scss */
+  .ui-datepicker {
+    width: 280px !important;
+    left: 50% !important;
+    margin-left: -140px !important;
+  }
+}
 /* line 40, ../sass/header.scss */
 header {
   background: url("../images/home-bg.jpg") no-repeat fixed center center/cover;
@@ -621,8 +692,9 @@ header .header_lower .search .search_button:hover {
 /* line 79, ../sass/content.scss */
 .content .locations .more a {
   font-size: 16px;
-  padding: 10px 40px;
+  padding: 10px 0;
   border-radius: 4px;
+  display: block;
 }
 /* line 29, ../sass/header.scss */
 .content .locations .more a {
@@ -636,11 +708,11 @@ header .header_lower .search .search_button:hover {
 .content .locations .more a:hover {
   opacity: 0.8;
 }
-/* line 87, ../sass/content.scss */
+/* line 88, ../sass/content.scss */
 .content .howitworks {
   background: #f8f8f8;
-  border-bottom: 1px solid #eeeeee;
   border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 /* line 14, ../sass/header.scss */
 .content .howitworks {
@@ -654,4 +726,206 @@ header .header_lower .search .search_button:hover {
   font-family: 'montserrat-semibold';
   text-align: center;
   margin-bottom: 60px;
+}
+/* line 99, ../sass/content.scss */
+.content .howitworks .howit_item .howit_image {
+  text-align: center;
+  margin-bottom: 20px;
+  min-height: 90px;
+}
+/* line 103, ../sass/content.scss */
+.content .howitworks .howit_item .howit_image img {
+  display: inline-block;
+}
+/* line 107, ../sass/content.scss */
+.content .howitworks .howit_item .howit_descr {
+  text-align: center;
+}
+/* line 109, ../sass/content.scss */
+.content .howitworks .howit_item .howit_descr .name {
+  color: #26262a;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+/* line 110, ../sass/content.scss */
+.content .howitworks .howit_item .howit_descr p {
+  font-size: 14px;
+}
+/* line 114, ../sass/content.scss */
+.content .review {
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+/* line 14, ../sass/header.scss */
+.content .review {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+/* line 120, ../sass/content.scss */
+.content .review .review_slider .bx-wrapper {
+  margin: 0 auto;
+}
+/* line 123, ../sass/content.scss */
+.content .review .review_slider .review_item {
+  text-align: center;
+}
+/* line 125, ../sass/content.scss */
+.content .review .review_slider .review_item > p {
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+/* line 127, ../sass/content.scss */
+.content .review .review_slider .reviewer {
+  display: inline-block;
+  width: 150px;
+}
+/* line 130, ../sass/content.scss */
+.content .review .review_slider .reviewer p, .content .review .review_slider .reviewer img {
+  display: inline-block;
+}
+/* line 131, ../sass/content.scss */
+.content .review .review_slider .reviewer img {
+  margin-right: 10px;
+}
+/* line 132, ../sass/content.scss */
+.content .review .review_slider .reviewer .name {
+  font-size: 14px;
+  color: #26262a;
+  font-weight: bold;
+}
+/* line 135, ../sass/content.scss */
+.content .review:before {
+  position: absolute;
+  top: -40px;
+  left: 20%;
+  background: url("../images/quotes-up.png") no-repeat 0 0;
+  width: 155px;
+  height: 120px;
+  content: '';
+}
+/* line 144, ../sass/content.scss */
+.content .review:after {
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  background: url("../images/quotes-down.png") no-repeat 0 0;
+  width: 146px;
+  height: 88px;
+  content: '';
+}
+/* line 154, ../sass/content.scss */
+.content .partners {
+  background: #5cca0c;
+}
+/* line 14, ../sass/header.scss */
+.content .partners {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* line 157, ../sass/content.scss */
+.content .partners .row > div {
+  text-align: center;
+}
+/* line 158, ../sass/content.scss */
+.content .partners .partner_logo {
+  display: inline-block;
+}
+/* line 160, ../sass/content.scss */
+.content .partners .partner_logo a {
+  display: table-cell;
+  vertical-align: middle;
+  height: 60px;
+}
+/* line 164, ../sass/content.scss */
+.content .partners .partner_logo a img {
+  max-width: 100%;
+  width: auto;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 172, ../sass/content.scss */
+  .howitworks .howit_item {
+    margin-bottom: 60px;
+  }
+
+  /* line 175, ../sass/content.scss */
+  .review:before {
+    left: 5% !important;
+  }
+  /* line 176, ../sass/content.scss */
+  .review:after {
+    right: 5% !important;
+  }
+  /* line 177, ../sass/content.scss */
+  .review .review_slider {
+    max-width: 100% !important;
+  }
+  /* line 180, ../sass/content.scss */
+  .review .review_slider .review_item p {
+    margin-bottom: 60px !important;
+  }
+
+  /* line 185, ../sass/content.scss */
+  .partners .partner_logo {
+    margin: 10px 0;
+  }
+  /* line 187, ../sass/content.scss */
+  .partners .partner_logo img {
+    width: 100% !important;
+  }
+}
+/* line 15, ../sass/footer.scss */
+footer {
+  background: #242723;
+}
+/* line 8, ../sass/footer.scss */
+footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+/* line 19, ../sass/footer.scss */
+footer .copyright a {
+  margin-bottom: 6px;
+  display: inline-block;
+}
+/* line 2, ../sass/footer.scss */
+footer .copyright p {
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.8;
+}
+/* line 25, ../sass/footer.scss */
+footer .footer_menu .section_title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+/* line 2, ../sass/footer.scss */
+footer .footer_menu .section_title {
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.8;
+}
+/* line 31, ../sass/footer.scss */
+footer .footer_menu ul li {
+  margin-bottom: 16px;
+}
+/* line 33, ../sass/footer.scss */
+footer .footer_menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+/* line 37, ../sass/footer.scss */
+footer .footer_menu ul li a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 46, ../sass/footer.scss */
+  footer .copyright {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 }

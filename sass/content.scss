@@ -79,20 +79,112 @@
             a {
                 @include greenbutton;
                 font-size: 16px;
-                padding: 10px 40px;
+                padding: 10px 0;
                 border-radius: 4px;
+				display:block;
             }
         }
     }
     .howitworks {
         @include vertpadding(90px);
         background: #f8f8f8;
-        border-bottom: 1px solid #eeeeee;
         border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
         .heading {
             .title {
                 @include mptitle;
             }
         }
+		.howit_item {
+			.howit_image {
+				text-align:center; 
+				margin-bottom:20px;
+				min-height:90px;
+				img {
+					display:inline-block;
+				}
+			}
+			.howit_descr {
+				text-align:center;
+				.name {color:#26262a; font-size:18px; margin-bottom:20px;}
+				p {font-size:14px;}
+			}
+		}
     }
+	.review {
+		@include vertpadding(90px);
+        background: #ffffff;
+		overflow:hidden;
+		position:relative;
+		.review_slider {
+			.bx-wrapper {
+				margin:0 auto;
+			}
+			.review_item {
+				text-align:center;
+				>p {font-size:14px; margin-bottom:40px;}
+			}
+			.reviewer {
+				display:inline-block;
+				width:150px;
+				p, img {display:inline-block;}
+				img {margin-right:10px;}
+				.name {font-size:14px; color:#26262a; font-weight:bold;}
+			}
+		}
+		&:before {
+			position: absolute;
+			top: -40px;
+			left: 20%;
+			background: url("../images/quotes-up.png") no-repeat 0 0;
+			width: 155px;
+			height: 120px;
+			content:'';
+		}
+		&:after {
+			position: absolute;
+			bottom: 0;
+			right: 20%;
+			background: url("../images/quotes-down.png") no-repeat 0 0;
+			width: 146px;
+			height: 88px;
+			content:'';
+		}
+	}
+	.partners {
+		@include vertpadding(50px);
+        background: #5cca0c;
+		.row > div {text-align:center;}
+		.partner_logo {
+			display:inline-block;
+			a {
+			display:table-cell;
+			vertical-align:middle;
+			height: 60px;
+			img {max-width:100%; width:auto; display:inline-block;}
+		}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+ .howitworks {
+	.howit_item {margin-bottom:60px;}
+ }
+ .review {
+	&:before {left:5% !important;}
+	&:after {right:5% !important;}
+	.review_slider {
+		max-width:100% !important;
+			.review_item {
+				p {margin-bottom:60px !important;}
+			}
+	}
+ }
+ .partners {
+	.partner_logo {
+		margin:10px 0;
+		img {width:100% !important;}
+	}
+ }
 }

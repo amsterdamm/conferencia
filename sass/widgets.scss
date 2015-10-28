@@ -143,3 +143,57 @@
         }
     }
 }
+
+.bx-wrapper {
+	.bx-pager {
+		height: 16px; 
+		margin: 10px 0 0;  
+		width: 100%; 
+		text-align:center;
+		.bx-pager-item {
+			display: inline-block; 
+			margin: 0 5px;
+			a { 
+				background: #c6c6c6 none repeat scroll 0 0; 
+				border-radius: 50%; 
+				display: block; 
+				font-size: 0; 
+				height: 8px; 
+				text-indent: -10000px !important; 
+				outline:none;  
+				width: 8px;
+				&.active {
+					background:#3fb436;
+				}
+			}
+		}
+	}
+	.bx-controls-direction {
+		a {
+			width:20px; 
+			height:36px;
+			top:50%;
+			margin-top:-18px;
+			position:absolute; 
+			outline:none;
+		}
+		.bx-prev { 
+			background: url("../images/arrow-prev.png") no-repeat scroll 0 0; 
+			left:-5%;
+			&:hover {background: url("../images/arrow-prev-hover.png") no-repeat scroll 0 0; }
+		}
+		.bx-next { 
+			background: url("../images/arrow-next.png") no-repeat scroll 0 0; 
+			right:-5%;
+			&:hover {background: url("../images/arrow-next-hover.png") no-repeat scroll 0 0; }
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.ui-datepicker {
+		width:280px !important;
+		left:50% !important;
+		margin-left:-140px !important;
+	}
+}
