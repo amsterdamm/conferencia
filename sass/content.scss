@@ -1,4 +1,60 @@
+@mixin ontop {
+    & {
+        position: relative;
+        z-index: 2;
+    }
+}
+@mixin nopadding {
+    & {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+@mixin vertpadding($pad) {
+    & {
+        padding-top: $pad;
+        padding-bottom: $pad;
+    }
+}
+@mixin mptitle {
+    & {
+        color: #26262a;
+        font-size: 32px;
+        font-family: 'montserrat-semibold';
+        text-align: center;
+        margin-bottom: 60px;
+    }
+}
+@mixin greenbutton {
+    & {
+        color: #fff;
+        text-decoration: none;
+        background: #3fb436;
+        box-sizing: border-box;
+        text-align: center;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+@mixin morebutton {
+
+         & { margin-top: 40px;
+             text-align: center;
+            a {
+                @include greenbutton;
+                font-size: 16px;
+                padding: 10px 0;
+                border-radius: 4px;
+				display:block;
+            }
+			}
+}
+/*mixins end*/
+
 .content {
+/*locations begin*/
     .locations {
         @include vertpadding(90px);
         .heading {
@@ -74,17 +130,12 @@
             }
         }
         .more {
-            margin-top: 40px;
-            text-align: center;
-            a {
-                @include greenbutton;
-                font-size: 16px;
-                padding: 10px 0;
-                border-radius: 4px;
-				display:block;
-            }
+            @include morebutton;
         }
     }
+/*locations end*/
+
+/*howit begin*/
     .howitworks {
         @include vertpadding(90px);
         background: #f8f8f8;
@@ -111,6 +162,9 @@
 			}
 		}
     }
+/*howit end*/
+
+/*review begin*/	
 	.review {
 		@include vertpadding(90px);
         background: #ffffff;
@@ -151,6 +205,9 @@
 			content:'';
 		}
 	}
+/*review end*/
+
+/*partners begin*/
 	.partners {
 		@include vertpadding(50px);
         background: #5cca0c;
@@ -165,8 +222,75 @@
 		}
 		}
 	}
+/*partners end*/
+
+/*who we begin*/	
+.who_we {
+	@include vertpadding(90px);
+	background:#fff;
+        .heading {
+            .title {
+                @include mptitle;
+            }
+        }
+		.text {text-align:center;}
+ }
+/*who we end*/
+
+/*our team begin*/
+ .our_team {
+	@include vertpadding(90px);
+	background:#fff;
+	.heading {
+            .title {
+                @include mptitle;
+            }
+        }
+		.more {
+            @include morebutton;
+        }
+		.teammate {
+			margin:0 auto 30px;
+			max-width:161px;
+			.teammate_img {
+				margin-bottom:10px;
+				padding: 3px;
+				box-shadow: 0 1px 1px 1px rgba(236, 236, 236, 0.9);
+				img { width:100%;}
+			}
+			.teammate_info {
+				.name {color:#26262a; font-size:14px; margin-bottom:4px;}
+				.post {color:#565658; font-size:12px;}
+			}
+		}
+ }
+/*our team end*/
+
+/*faq begin*/
+ .faq {
+	@include vertpadding(90px);
+	background:#fff;
+	.faq_nav {
+		@include vertpadding(36px);
+		ul {
+			li {
+				margin-bottom:16px;
+				a {
+					color:#565658; text-transform:uppercase; font-size:11px; text-decoration:none; padding-right:12px; outline:none;
+					&:hover, &.active {color:#3fb436; border-bottom:2px solid #3fb436;}
+				}
+			}
+		}
+	}
+	.faq_item {
+		@include vertpadding(36px);
+		&:not(:last-child) {border-bottom: 1px solid #eeeeee;}
+		.name {color:#292f33; font-size:18px; margin-bottom:20px;}
+	}
+ }
 }
 
+/*responsive styles*/
 @media only screen and (max-width: 768px) {
  .howitworks {
 	.howit_item {margin-bottom:60px;}
@@ -187,4 +311,10 @@
 		img {width:100% !important;}
 	}
  }
+ 
+  .our_team {
+	.row {
+		.col-xs-6:nth-of-type(2n+1) {clear:both;}
+	}
+  }
 }

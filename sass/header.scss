@@ -38,7 +38,6 @@
     }
 }
 header {
-    background: url("../images/home-bg.jpg") no-repeat fixed center center / cover;
     position: relative;
     &:after {
         position: absolute;
@@ -50,6 +49,7 @@ header {
     }
     .header_upper {
         @include ontop;
+		z-index:3 !important;
         padding-top: 30px;
         .header_links {
             text-align: right;
@@ -76,10 +76,15 @@ header {
                 background: none;
                 border: none;
                 .navbar-collapse {
-                    background: rgba(36, 39, 35, 0.92);
+                    background: rgba(36, 39, 35, 0.99);
                     border: none;
                     box-shadow: none !important;
+					width:100%;
+					top:0;
+					height:100%;
+					position:fixed;
                     ul {
+						margin-top:100px;
                         li {
                             margin-top: 15px;
                             text-align: center;
@@ -88,16 +93,33 @@ header {
                                 text-transform: uppercase;
                                 text-decoration: none;
                                 font-size: 18px;
+								display:inline-block;
+								outline:none;
                             }
                         }
                     }
                 }
                 .navbar-toggle {
+					&:hover, &:focus { background-color: rgba(0, 0, 0, 0) !important;}
+					&:not(.collapsed) {
+						border:none !important; 
+						background: url("../images/cross.png") no-repeat scroll 0 0; 
+						width:27px; 
+						height:27px; 
+						z-index:4; 
+						background-color:none !important; 
+						margin-top:0; 
+						margin-right:32px;
+						.icon-bar { display:none;}
+					}
+					&.collapsed {
                     margin: 0 30px 0 0;
                     border: none;
                     padding: 10px 11px;
                     .icon-bar {
                         background: #fff;
+						width:27px; height:1px;
+						&:not(:last-of-type) {margin-bottom:6px;}
                     }
                     &:hover,
                     &:active,
@@ -107,6 +129,7 @@ header {
                         padding: 9px 10px;
                     }
                 }
+				}
             }
             .logo {
                 float: left;
