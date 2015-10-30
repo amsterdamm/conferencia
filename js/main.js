@@ -36,20 +36,23 @@ $(document).ready(function(){
 				onSliderLoad: function(currentIndex){}
 				});
 				
-						$('.faq_nav ul li a[href^="#"]').click(function(){
-						var target = $(this).attr('href');
-						$(".faq_nav ul li a.active").removeClass('active');
-						$('html, body').animate({scrollTop: $(target).offset().top}, 800);
-						$(this).addClass('active');
-						return false;
-						});
+			$('.faq_nav ul li a[href^="#"]').click(function(){
+			var target = $(this).attr('href');
+			$(".faq_nav ul li a.active").removeClass('active');
+			$('html, body').animate({scrollTop: $(target).offset().top}, 800);
+			$(this).addClass('active');
+			return false;
+			});
 						
-						  $(".faq_nav ul").sticky({topSpacing:36});
 						  
-						  $(".header_menu .nav_close").click(function(e){
-						  e.preventDefault();
-							$(".header_menu").hide(400);
-							return false;
-						  });
+			$(".header_menu .navbar-toggle").click(function(){
+			if($(this).hasClass('collapsed')){
+				$('body').addClass("ov_hidden");
+			}else{	
+				$('body').removeClass("ov_hidden");
+			}		
+			});
+
+						  
 				
 	  });

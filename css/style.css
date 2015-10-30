@@ -380,11 +380,16 @@ ul, ol {
     margin-left: -140px !important;
   }
 }
-/* line 40, ../sass/header.scss */
+/* line 41, ../sass/header.scss */
+.ov_hidden {
+  overflow: hidden;
+}
+
+/* line 46, ../sass/header.scss */
 header {
   position: relative;
 }
-/* line 42, ../sass/header.scss */
+/* line 48, ../sass/header.scss */
 header:after {
   position: absolute;
   top: 0;
@@ -393,7 +398,7 @@ header:after {
   width: 100%;
   height: 100%;
 }
-/* line 50, ../sass/header.scss */
+/* line 56, ../sass/header.scss */
 header .header_upper {
   z-index: 3 !important;
   padding-top: 30px;
@@ -403,27 +408,27 @@ header .header_upper {
   position: relative;
   z-index: 2;
 }
-/* line 54, ../sass/header.scss */
+/* line 60, ../sass/header.scss */
 header .header_upper .header_links {
   text-align: right;
 }
-/* line 56, ../sass/header.scss */
+/* line 62, ../sass/header.scss */
 header .header_upper .header_links a {
   padding: 4px 20px;
   color: #fff;
   text-decoration: none;
   display: inline-block;
 }
-/* line 62, ../sass/header.scss */
+/* line 68, ../sass/header.scss */
 header .header_upper .header_links .login {
   margin: 0 12px 0 0;
 }
-/* line 65, ../sass/header.scss */
+/* line 71, ../sass/header.scss */
 header .header_upper .header_links .register {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
 }
-/* line 68, ../sass/header.scss */
+/* line 74, ../sass/header.scss */
 header .header_upper .header_links .register:hover {
   background: rgba(255, 255, 255, 0.2);
 }
@@ -432,12 +437,12 @@ header .header_upper .header_menu {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-/* line 75, ../sass/header.scss */
+/* line 81, ../sass/header.scss */
 header .header_upper .header_menu nav {
   background: none;
   border: none;
 }
-/* line 78, ../sass/header.scss */
+/* line 84, ../sass/header.scss */
 header .header_upper .header_menu nav .navbar-collapse {
   background: rgba(36, 39, 35, 0.99);
   border: none;
@@ -447,16 +452,16 @@ header .header_upper .header_menu nav .navbar-collapse {
   height: 100%;
   position: fixed;
 }
-/* line 86, ../sass/header.scss */
+/* line 92, ../sass/header.scss */
 header .header_upper .header_menu nav .navbar-collapse ul {
-  margin-top: 100px;
+  margin-top: 60px;
 }
-/* line 88, ../sass/header.scss */
+/* line 94, ../sass/header.scss */
 header .header_upper .header_menu nav .navbar-collapse ul li {
   margin-top: 15px;
   text-align: center;
 }
-/* line 91, ../sass/header.scss */
+/* line 97, ../sass/header.scss */
 header .header_upper .header_menu nav .navbar-collapse ul li a {
   color: #fff;
   text-transform: uppercase;
@@ -465,11 +470,15 @@ header .header_upper .header_menu nav .navbar-collapse ul li a {
   display: inline-block;
   outline: none;
 }
-/* line 103, ../sass/header.scss */
+/* line 104, ../sass/header.scss */
+header .header_upper .header_menu nav .navbar-collapse ul li a:hover {
+  text-decoration: underline;
+}
+/* line 110, ../sass/header.scss */
 header .header_upper .header_menu nav .navbar-toggle:hover, header .header_upper .header_menu nav .navbar-toggle:focus {
   background-color: transparent !important;
 }
-/* line 104, ../sass/header.scss */
+/* line 111, ../sass/header.scss */
 header .header_upper .header_menu nav .navbar-toggle:not(.collapsed) {
   border: none !important;
   background: url("../images/cross.png") no-repeat scroll 0 0;
@@ -480,47 +489,47 @@ header .header_upper .header_menu nav .navbar-toggle:not(.collapsed) {
   margin-top: 0;
   margin-right: 32px;
 }
-/* line 113, ../sass/header.scss */
+/* line 120, ../sass/header.scss */
 header .header_upper .header_menu nav .navbar-toggle:not(.collapsed) .icon-bar {
   display: none;
 }
-/* line 115, ../sass/header.scss */
+/* line 122, ../sass/header.scss */
 header .header_upper .header_menu nav .navbar-toggle.collapsed {
   margin: 0 30px 0 0;
   border: none;
   padding: 10px 11px;
 }
-/* line 119, ../sass/header.scss */
+/* line 126, ../sass/header.scss */
 header .header_upper .header_menu nav .navbar-toggle.collapsed .icon-bar {
   background: #fff;
   width: 27px;
   height: 1px;
 }
-/* line 122, ../sass/header.scss */
+/* line 129, ../sass/header.scss */
 header .header_upper .header_menu nav .navbar-toggle.collapsed .icon-bar:not(:last-of-type) {
   margin-bottom: 6px;
 }
-/* line 124, ../sass/header.scss */
+/* line 131, ../sass/header.scss */
 header .header_upper .header_menu nav .navbar-toggle.collapsed:hover, header .header_upper .header_menu nav .navbar-toggle.collapsed:active, header .header_upper .header_menu nav .navbar-toggle.collapsed:focus {
   background: none;
   border: 1px solid #fff;
   padding: 9px 10px;
 }
-/* line 134, ../sass/header.scss */
+/* line 141, ../sass/header.scss */
 header .header_upper .header_menu .logo {
   float: left;
   margin: 10px 0 0 30px;
 }
-/* line 138, ../sass/header.scss */
+/* line 145, ../sass/header.scss */
 header .header_upper .header_menu .menu_links {
   margin: 40px 0 20px 0;
 }
-/* line 141, ../sass/header.scss */
+/* line 148, ../sass/header.scss */
 header .header_upper .header_menu .menu_links li a {
   padding: 10px 0;
   display: block;
 }
-/* line 149, ../sass/header.scss */
+/* line 156, ../sass/header.scss */
 header .header_lower {
   padding-top: 10%;
   padding-bottom: 10%;
@@ -530,18 +539,18 @@ header .header_lower {
   position: relative;
   z-index: 2;
 }
-/* line 153, ../sass/header.scss */
+/* line 160, ../sass/header.scss */
 header .header_lower .description {
   text-align: center;
   margin-bottom: 60px;
 }
-/* line 156, ../sass/header.scss */
+/* line 163, ../sass/header.scss */
 header .header_lower .description p {
   color: #fff;
   font-size: 24px;
   opacity: 0.4;
 }
-/* line 160, ../sass/header.scss */
+/* line 167, ../sass/header.scss */
 header .header_lower .description p.title {
   font-family: 'montserrat-semibold';
   font-size: 44px;
@@ -552,7 +561,7 @@ header .header_lower .search .row div {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-/* line 171, ../sass/header.scss */
+/* line 178, ../sass/header.scss */
 header .header_lower .search .row div input, header .header_lower .search .row div .chosen-container {
   height: 40px;
   width: 100% !important;
@@ -561,43 +570,43 @@ header .header_lower .search .row div input, header .header_lower .search .row d
   padding: 4px 6px 4px 26px !important;
   border-right: 1px solid #dddddd;
 }
-/* line 179, ../sass/header.scss */
+/* line 186, ../sass/header.scss */
 header .header_lower .search .row div .chosen-container {
   background: #fff;
 }
-/* line 183, ../sass/header.scss */
+/* line 190, ../sass/header.scss */
 header .header_lower .search .row div.time input {
   width: 50% !important;
   float: left;
 }
-/* line 188, ../sass/header.scss */
+/* line 195, ../sass/header.scss */
 header .header_lower .search .row div.venue input {
   border-radius: 6px 0 0 6px;
 }
-/* line 191, ../sass/header.scss */
+/* line 198, ../sass/header.scss */
 header .header_lower .search .row div.searching a {
   border-radius: 0 6px 6px 0;
 }
-/* line 194, ../sass/header.scss */
+/* line 201, ../sass/header.scss */
 header .header_lower .search .row div.venue input {
   background: white url("../images/venue.png") no-repeat 8px 12px;
 }
-/* line 197, ../sass/header.scss */
+/* line 204, ../sass/header.scss */
 header .header_lower .search .row div.person .chosen-container {
   background: white url("../images/persons.png") no-repeat 6px 11px;
 }
-/* line 200, ../sass/header.scss */
+/* line 207, ../sass/header.scss */
 header .header_lower .search .row div.date input {
   background: white url("../images/date.png") no-repeat 6px 12px;
 }
-/* line 203, ../sass/header.scss */
+/* line 210, ../sass/header.scss */
 header .header_lower .search .row div.time input {
   background: white url("../images/time.png") no-repeat 5px 12px;
 }
-/* line 208, ../sass/header.scss */
+/* line 215, ../sass/header.scss */
 header .header_lower .search .search_button {
   display: block;
-  padding-top: 8px;
+  padding: 11px 0;
   height: 40px;
 }
 /* line 29, ../sass/header.scss */
@@ -614,25 +623,30 @@ header .header_lower .search .search_button:hover {
 }
 
 @media only screen and (max-width: 768px) {
-  /* line 221, ../sass/header.scss */
+  /* line 225, ../sass/header.scss */
+  .ov_hidden {
+    position: fixed;
+  }
+
+  /* line 229, ../sass/header.scss */
   .search .row div.venue input {
     border-radius: 6px 6px 0 0 !important;
   }
-  /* line 224, ../sass/header.scss */
+  /* line 232, ../sass/header.scss */
   .search .row div.searching a {
     border-radius: 0 0 6px 6px !important;
   }
-  /* line 227, ../sass/header.scss */
+  /* line 235, ../sass/header.scss */
   .search .row div input,
   .search .row div .chosen-container {
     border-bottom: 1px solid #ddd !important;
     border-right: none !important;
   }
-  /* line 233, ../sass/header.scss */
+  /* line 241, ../sass/header.scss */
   .search .row div.time input {
     border-bottom: none !important;
   }
-  /* line 235, ../sass/header.scss */
+  /* line 243, ../sass/header.scss */
   .search .row div.time input:first-child {
     border-right: 1px solid #ddd !important;
   }

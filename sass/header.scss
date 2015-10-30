@@ -37,6 +37,12 @@
         }
     }
 }
+
+.ov_hidden {
+	overflow:hidden;
+	
+}
+
 header {
     position: relative;
     &:after {
@@ -84,7 +90,7 @@ header {
 					height:100%;
 					position:fixed;
                     ul {
-						margin-top:100px;
+						margin-top:60px;
                         li {
                             margin-top: 15px;
                             text-align: center;
@@ -95,6 +101,7 @@ header {
                                 font-size: 18px;
 								display:inline-block;
 								outline:none;
+								&:hover {text-decoration:underline;}
                             }
                         }
                     }
@@ -208,13 +215,14 @@ header {
             .search_button {
                 @include greenbutton;
                 display: block;
-                padding-top: 8px;
+                padding: 11px 0;
                 height: 40px;
             }
         }
     }
 }
 @media only screen and (max-width: 768px) {
+	.ov_hidden {position:fixed}
     .search {
         .row {
             div {
