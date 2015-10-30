@@ -38,6 +38,14 @@
     }
 }
 
+@mixin headingone {
+	  & {
+	  font-family: 'montserrat-semibold';
+      font-size: 44px;
+      opacity: 1;
+	  }
+}
+
 .ov_hidden {
 	overflow:hidden;
 	
@@ -165,11 +173,13 @@ header {
                 font-size: 24px;
                 opacity: 0.4;
                 &.title {
-                    font-family: 'montserrat-semibold';
-                    font-size: 44px;
-                    opacity: 1;
+                    @include headingone;
                 }
             }
+			h1 {
+				color:#fff;
+				@include headingone;
+			}
         }
         .search {
             .row {

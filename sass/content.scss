@@ -58,7 +58,7 @@
     .locations {
         @include vertpadding(90px);
         .heading {
-            .title {
+            .title, h2 {
                 @include mptitle;
             }
         }
@@ -142,7 +142,7 @@
         border-top: 1px solid #eeeeee;
         border-bottom: 1px solid #eeeeee;
         .heading {
-            .title {
+            .title, h2 {
                 @include mptitle;
             }
         }
@@ -229,7 +229,7 @@
 	@include vertpadding(90px);
 	background:#fff;
         .heading {
-            .title {
+            .title, h2 {
                 @include mptitle;
             }
         }
@@ -242,7 +242,7 @@
 	@include vertpadding(90px);
 	background:#fff;
 	.heading {
-            .title {
+            .title, h2 {
                 @include mptitle;
             }
         }

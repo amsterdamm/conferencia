@@ -21,7 +21,7 @@
   padding-bottom: 90px;
 }
 /* line 20, ../sass/content.scss */
-.content .locations .heading .title {
+.content .locations .heading .title, .content .locations .heading h2 {
   color: #26262a;
   font-size: 32px;
   font-family: 'montserrat-semibold';
@@ -134,7 +134,7 @@
   padding-bottom: 90px;
 }
 /* line 20, ../sass/content.scss */
-.content .howitworks .heading .title {
+.content .howitworks .heading .title, .content .howitworks .heading h2 {
   color: #26262a;
   font-size: 32px;
   font-family: 'montserrat-semibold';
@@ -267,7 +267,7 @@
   padding-bottom: 90px;
 }
 /* line 20, ../sass/content.scss */
-.content .who_we .heading .title {
+.content .who_we .heading .title, .content .who_we .heading h2 {
   color: #26262a;
   font-size: 32px;
   font-family: 'montserrat-semibold';
@@ -288,7 +288,7 @@
   padding-bottom: 90px;
 }
 /* line 20, ../sass/content.scss */
-.content .our_team .heading .title {
+.content .our_team .heading .title, .content .our_team .heading h2 {
   color: #26262a;
   font-size: 32px;
   font-family: 'montserrat-semibold';

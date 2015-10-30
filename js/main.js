@@ -7,10 +7,12 @@ $(document).ready(function(){
 				dayNamesMin: [ "S", "M", "T", "W", "T", "F", "S" ]
 			});
 		$('#from').timepicker({
-			interval:60
+			interval:60,
+			timeFormat: 'H:mm'
 		 });
 		 $('#to').timepicker({
-			interval:60
+			interval:60,
+			timeFormat: 'H:mm'
 		 });
 
 		/* 
