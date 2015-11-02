@@ -55,7 +55,7 @@ header .header_upper .header_links .login {
 /* line 92, ../sass/header.scss */
 header .header_upper .header_links .register {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  border-radius: 4px;
 }
 /* line 95, ../sass/header.scss */
 header .header_upper .header_links .register:hover {
